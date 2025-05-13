@@ -1,7 +1,7 @@
 # 🐴 PRW_SuarezBritoNoa — Gestión de Hípica
 
 📌 **Descripción**  
-Este proyecto es una aplicación web orientada a la gestión de una **hípica**, desarrollada como trabajo final de Programación Web.  
+Este proyecto es una aplicación web orientada a la gestión de una **hípica**, desarrollada como trabajo final del ciclo de Desarrollo de Aplicaciones Web.  
 Permite administrar alumnos/as y profesorado, clases de doma y salto, horarios, valoraciones, imágenes de perfil y más.
 
 Incluye inicio de sesión, subida de imágenes, sistema de valoración con estrellas, roles diferenciados (alumnado y profesorado) y una interfaz estructurada para su uso desde cualquier dispositivo.
