@@ -1,0 +1,204 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: row;  /* Cambiar a 'row' para alinear logo y texto horizontalmente */
+    align-items: center;  /* Alineación vertical centrada */
+    justify-content: center;
+    background-color: #a67c52;
+    padding: 20px;
+    color: white;
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+header .logo img {
+    width: 50px;  /* Puedes ajustar el tamaño del logo si es necesario */
+    height: auto;
+    margin-right: 15px;  /* Espaciado entre el logo y el título */
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Contenedor principal */
+.profesores-container {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1830px;  /* Establecer el ancho máximo a 1830px */
+    width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+    text-align: center;
+}
+
+.profesores-container h2 {
+    color: #764c24;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profesores-container hr {
+    border: 0;
+    height: 2px;
+    background-color: #764c24;
+    margin: 10px 0;
+}
+
+.profesores-container p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+/* Botones de acción */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre botones */
+}
+
+.actions button {
+    background-color: #a67c52;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: #764c24;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #a67c52;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Estilos para los enlaces en el footer */
+footer a {
+    color: #ffdda0; /* Color dorado claro para los enlaces */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Asegurarse que los enlaces no tomen el color azul predeterminado */
+footer a:visited,
+footer a:active,
+footer a:hover {
+    color: #ffdda0; /* Usar el mismo color dorado claro */
+    text-decoration: none; /* Evitar el subrayado en hover */
+}
+
+/* Estilo cuando el enlace está enfocado */
+footer a:focus {
+    color: #ffdda0;
+    outline: none;
+}
+
+/* ------- Responsive hasta 768px ------- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    header .logo img {
+        margin: 0 auto 10px auto;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .profesores-container {
+        width: 90%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .profesores-container h2 {
+        font-size: 22px;
+    }
+
+    .profesores-container p {
+        font-size: 15px;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .actions button {
+        width: 100%;
+        max-width: 300px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 18px;
+    }
+
+    footer a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+/* ------- Responsive hasta 480px ------- */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    .profesores-container h2 {
+        font-size: 20px;
+    }
+
+    .profesores-container p {
+        font-size: 14px;
+    }
+
+    .actions button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px;
+    }
+
+    footer a {
+        margin: 2px 6px;
+    }
+}

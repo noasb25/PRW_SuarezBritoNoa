@@ -1,0 +1,230 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a67c52;
+    color: white;
+    padding: 20px;
+}
+
+header .logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Contenedor del formulario */
+.preferencias-container {
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Estilo del título dentro del contenedor */
+.preferencias-container h2 {
+    color: #764c24;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilo del label */
+.preferencias-container label {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Línea debajo del texto "Select Language" */
+.preferencias-container hr {
+    border: 0;
+    height: 2px;
+    background-color: #764c24;
+    margin: 10px 0 20px 0;
+}
+
+/* Estilo del select */
+.preferencias-container select {
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Estilo del botón */
+.preferencias-container button {
+    background-color: #a67c52;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover del botón */
+.preferencias-container button:hover {
+    background-color: #764c24;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #a67c52;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer a {
+    color: #ffdda0;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffd700;
+}
+
+/* ----------- RESPONSIVE DESIGN PARA PANTALLAS HASTA 768px ----------- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo img {
+        margin: 0 auto 10px auto;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .preferencias-container {
+        width: 90%;
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .preferencias-container h2 {
+        font-size: 20px;
+    }
+
+    .preferencias-container select {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .preferencias-container button {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+
+/* ----------- RESPONSIVE DESIGN PARA PANTALLAS HASTA 480px ----------- */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    header .logo img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 18px;
+        word-wrap: break-word;
+        line-height: 1.2;
+    }
+
+    .preferencias-container {
+        padding: 20px 15px;
+        width: 90%;
+    }
+
+    .preferencias-container h2 {
+        font-size: 18px;
+    }
+
+    .preferencias-container select,
+    .preferencias-container button {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px 0;
+    }
+}
+
+/* Estilos ultra responsivos para pantallas muy estrechas */
+@media (max-width: 320px) {
+    body {
+        font-size: 12px;
+    }
+
+    header h1 {
+        font-size: 16px;
+        word-break: break-word;
+    }
+
+    .preferencias-container {
+        width: 95%;
+        padding: 15px 10px;
+    }
+
+    .preferencias-container h2 {
+        font-size: 16px;
+    }
+
+    .preferencias-container select,
+    .preferencias-container button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
+
+/* Previene que todo se aplaste en anchuras extremas */
+body {
+    min-width: 250px;
+}

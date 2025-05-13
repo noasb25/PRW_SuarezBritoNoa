@@ -1,0 +1,178 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hace que el contenido ocupe toda la altura de la ventana */
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a67c52;
+    padding: 20px;
+    color: white;
+}
+
+header .logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Mensaje de bienvenida */
+.welcome-message {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1830px; 
+    text-align: left;
+}
+
+.welcome-message h2 {
+    color: #764c24;
+    font-size: 24px;
+    text-align: center;
+}
+
+.welcome-message hr {
+    border: 0;
+    height: 2px;
+    background-color: #764c24;
+    margin: 10px 0;
+}
+
+.welcome-message p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Botones de acción */
+.action-buttons {
+    margin-top: 30px;
+}
+
+.action-buttons button {
+    background-color: #a67c52;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.action-buttons button:hover {
+    background-color: #764c24;
+}
+
+/* Footer */
+footer {
+    background-color: #a67c52;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: auto; /* Asegura que el footer se mantenga en la parte inferior */
+    width: 100%;
+}
+
+footer a {
+    color: #ffdda0;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffd700;
+}
+
+/* ------- Responsive hasta 768px ------- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    header .logo img {
+        margin: 0 auto 10px auto;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .welcome-message {
+        width: 90%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .welcome-message h2 {
+        font-size: 20px;
+    }
+
+    .welcome-message p {
+        font-size: 14px;
+    }
+
+    .action-buttons button {
+        width: 80%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* ------- Responsive hasta 480px ------- */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    .welcome-message h2 {
+        font-size: 18px;
+    }
+
+    .welcome-message p {
+        font-size: 13px;
+    }
+
+    .action-buttons button {
+        width: 100%;
+        font-size: 13px;
+        margin: 8px 0;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px 10px;
+    }
+
+    footer a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+/* ------- Previene colapsos extremos ------- */
+body {
+    min-width: 250px;
+}

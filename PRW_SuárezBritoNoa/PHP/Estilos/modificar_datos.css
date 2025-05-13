@@ -1,0 +1,247 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hace que el contenido ocupe toda la altura de la ventana */
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a67c52;
+    padding: 20px;
+    color: white;
+}
+
+header .logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Contenedor de modificación de datos */
+.modificar-container {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px; /* Cambiado a ancho fijo de 600px */
+    text-align: center;
+}
+
+.modificar-container h2 {
+    color: #764c24;
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #764c24; /* Línea debajo del título */
+}
+
+.modificar-container hr {
+    border: 0;
+    height: 2px;
+    background-color: #764c24;
+    margin: 10px 0;
+}
+
+.modificar-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modificar-container label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.modificar-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.modificar-container input:focus {
+    border-color: #764c24;
+    outline: none;
+    box-shadow: 0 0 5px rgba(118, 76, 36, 0.5);
+}
+
+.modificar-container button {
+    background-color: #a67c52;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modificar-container button:hover {
+    background-color: #764c24;
+}
+
+/* Contenedor de botones (Modificar y Cerrar sesión) */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre los botones */
+    margin-top: 20px;
+}
+
+.buttons-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #a67c52;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons-container button:hover {
+    background-color: #764c24;
+}
+
+/* Footer */
+footer {
+    background-color: #a67c52;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer a {
+    color: #ffdda0;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffd700;
+}
+
+/* Contenedor de errores */
+.error-container {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: left;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+}
+
+.error-container ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.error-container li {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* ------- Responsive hasta 768px ------- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .modificar-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .modificar-container h2 {
+        font-size: 22px;
+    }
+
+    .modificar-container input {
+        font-size: 15px;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .buttons-container button {
+        width: 100%;
+        max-width: 300px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 18px;
+    }
+
+    footer a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+/* ------- Responsive hasta 480px ------- */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    .modificar-container h2 {
+        font-size: 20px;
+    }
+
+    .modificar-container input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .buttons-container button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px;
+    }
+
+    footer a {
+        margin: 2px 6px;
+    }
+}

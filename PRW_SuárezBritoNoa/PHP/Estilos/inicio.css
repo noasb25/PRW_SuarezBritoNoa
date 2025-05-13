@@ -1,0 +1,379 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px; /* Ajusta la altura del encabezado */
+    color: #fff;
+}
+
+.slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Asegura que las imágenes estén detrás del contenido del header */
+    display: flex;
+    justify-content: center;
+}
+
+.slide {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    filter: brightness(70%);
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 36px; /* Aumenta el tamaño del título */
+    font-weight: bold;
+}
+
+.user-icon img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+/* Navegación */
+nav {
+    background-color: #a67c52;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: rgba(204, 155, 110, 0.678);
+}
+
+/* Estilo para los botones dentro de la navegación */
+nav ul li a button {
+    background-color: #a67c52;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a button:hover {
+    background-color: #764c24;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Secciones */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #764c24;
+    font-size: 24px;
+    border-bottom: 2px solid #764c24;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Servicios */
+#servicios {
+    margin-bottom: 40px;
+}
+
+#servicios h2 {
+    color: #764c24;
+    text-align: left;
+    font-size: 24px;
+    border-bottom: 2px solid #764c24;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.servicios-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.servicio {
+    width: 200px;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.servicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.servicio h3 {
+    color: #764c24;
+    margin-top: 10px;
+}
+
+/* Ubicación */
+#ubicacion iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+    margin-top: 10px;
+}
+
+/* Contacto */
+#contacto p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #a67c52;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ffdda0;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffd700;
+}
+
+/* AJUSTES RESPONSIVE PARA PANTALLAS HASTA 768px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 250px;
+        padding: 10px;
+        position: relative;
+    }
+
+    .slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .slide {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .logo,
+    .user-icon {
+        z-index: 2;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .user-icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    header h1 {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        z-index: 2;
+        padding: 5px 10px;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    .servicios-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicio {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* AJUSTES RESPONSIVE PARA PANTALLAS HASTA 480px */
+@media (max-width: 480px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+        position: relative;
+    }
+
+    .slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .slide {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .logo,
+    .user-icon {
+        z-index: 2;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .user-icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    header h1 {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        z-index: 2;
+        padding: 5px 10px;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+    }
+}
+
+/* AJUSTES RESPONSIVE PARA PANTALLAS MUY PEQUEÑAS (HASTA 320px) */
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .user-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    nav ul li a {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    .servicio {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}
